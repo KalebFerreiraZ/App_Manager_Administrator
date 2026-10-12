@@ -1,0 +1,165 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f7f8fa;
+    color: #252525;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.docs {
+    min-height: 100vh;
+}
+
+.docs-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 55px 20px 45px;
+    text-align: center;
+}
+
+.docs-header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: #1f2933;
+}
+
+.docs-header p {
+    margin: 12px 0 0;
+    color: #7a8490;
+    font-size: 15px;
+}
+
+.docs-content {
+    width: 92%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 45px 0 70px;
+}
+
+.docs-section {
+    background: #ffffff;
+    border: 1px solid #e5e8ec;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.docs-section h2 {
+    margin: 0 0 22px;
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #eaf5fa;
+
+    font-size: 24px;
+    font-weight: 700;
+    color: #26323b;
+}
+
+.docs-section p {
+    margin: 0 0 18px;
+
+    color: #4f5963;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.docs-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================
+   IMAGEM
+========================= */
+
+.image-container {
+    display: flex;
+    justify-content: center;
+
+    margin: 28px 0;
+    padding: 10px;
+}
+
+.image-container img {
+    display: block;
+
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+
+    border: 1px solid #dfe4e8;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================
+   FUNCIONALIDADES
+========================= */
+
+.feature {
+    margin-top: 20px;
+    padding: 20px;
+
+    background: #f8fbfd;
+    border-left: 4px solid #a9dcef;
+    border-radius: 6px;
+}
+
+.feature h3 {
+    margin: 0 0 8px;
+
+    font-size: 18px;
+    color: #2e5666;
+}
+
+.feature p {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 600px) {
+
+    .docs-header {
+        padding: 40px 18px 35px;
+    }
+
+    .docs-header h1 {
+        font-size: 27px;
+    }
+
+    .docs-content {
+        width: 94%;
+        padding: 25px 0 45px;
+    }
+
+    .docs-section {
+        padding: 21px 18px;
+    }
+
+    .docs-section h2 {
+        font-size: 21px;
+    }
+
+    .docs-section p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .feature {
+        padding: 16px;
+    }
+
+    .feature h3 {
+        font-size: 17px;
+    }
+}
+

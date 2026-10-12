@@ -1,0 +1,190 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fa;
+    color: #222;
+}
+
+.app {
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 45px 0 60px;
+}
+
+.page-header {
+    margin-bottom: 35px;
+}
+
+.page-header h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.page-header p {
+    margin: 0;
+    color: #69727d;
+    font-size: 16px;
+}
+
+.section {
+    background: #fff;
+    border: 1px solid #e5eaf0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    margin: 0 0 18px;
+    font-size: 21px;
+}
+
+.section-description {
+    margin: 0 0 20px;
+    color: #707984;
+}
+
+textarea {
+    width: 100%;
+    min-height: 260px;
+    display: block;
+
+    padding: 15px;
+    border: 1px solid #d6dde5;
+    border-radius: 9px;
+
+    background: #fbfcfd;
+    color: #222;
+
+    font-size: 14px;
+    font-family: monospace;
+
+    resize: vertical;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #8ecae6;
+    box-shadow: 0 0 0 3px rgba(142, 202, 230, 0.18);
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 18px;
+
+    background: #8ecae6;
+    color: #18323e;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #76bddc;
+}
+
+.format-button {
+    margin-top: 15px;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    flex: 1;
+    min-width: 180px;
+}
+
+.buttons .delete-button {
+    background: #fff;
+    border: 1px solid #d9dfe5;
+    color: #333;
+}
+
+.buttons .delete-button:hover {
+    background: #f3f5f7;
+}
+
+.processing,
+.message {
+    background: #fff;
+    border: 1px solid #e1e6eb;
+    border-radius: 9px;
+    padding: 13px 15px;
+    margin-top: 15px;
+}
+
+.processing {
+    color: #397086;
+}
+
+.message {
+    color: #333;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+        padding: 30px 0 40px;
+    }
+
+    .page-header h1 {
+        font-size: 25px;
+    }
+
+    .section {
+        padding: 18px;
+    }
+
+    textarea {
+        min-height: 220px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+}
+/* Botão Formatar */
+.format-button {
+    margin-top: 15px;
+    background: #b8e6c1;
+    color: #245c31;
+}
+
+.format-button:hover {
+    background: #a3dcb0;
+}
+
+/* Botão Deletar */
+.buttons .delete-button {
+    background: #f7b8b8;
+    border: 1px solid #efaaaa;
+    color: #7a2424;
+}
+
+.buttons .delete-button:hover {
+    background: #f0a3a3;
+}

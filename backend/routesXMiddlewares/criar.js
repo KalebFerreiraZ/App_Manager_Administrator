@@ -48,16 +48,30 @@ Createrouter.post("/",(req,res) =>{
     tabela = db.collection('dezembro')
 }
     const usuarios = req.body.usuarios
+    const newUsers = []
+    const errorUsers = []
     async function enviar(params) {
         if(!usuarios || typeof usuarios == 'string'){
             res.json({message:"Erro usuarios nao existem"})
             return;
         }
-    for(const element of usuarios){
+        for await(const element of usuarios){
+            const request = await tabela.findOne({
+                matricula:element.matricula
+            })
+            if(!request){
+                newUsers.push(element)
+            }
+            else{
+                errorUsers.push(element.matricula)
+            }
+        }
+    for await  (const element of newUsers){
         const criando = await tabela.insertOne(element)
     }
-    res.json({message:"Usuarios criados com sucesso."})
+    res.json({message:"Usuarios criados com sucesso.",messageError:`ERRO SIMPLES: usuarios de matricula: ${errorUsers} ja existem no banco de dados`,userError:errorUsers})
 }
+
 enviar()
 })
 export default Createrouter

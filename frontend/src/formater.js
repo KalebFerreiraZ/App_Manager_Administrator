@@ -1,4 +1,4 @@
-export default function Formater(text){
+export default function FormaterRV(text){
 const linhas = text
     .split(/\r?\n/)
     .map(linha => linha.trim())

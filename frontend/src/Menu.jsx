@@ -1,7 +1,10 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Menu.css";
 
 export default function Menu() {
+
     const navigate = useNavigate();
 
     const meses = [
@@ -37,32 +40,49 @@ export default function Menu() {
     }
 
     return (
-        <div>
-            <button onClick={() => navigate("/learn")}>
-                Como usar?
-            </button>
+        <header className="menu">
 
-            <select
-                onFocus={abrirOpcoes}
-                onChange={selecionarMes}
-                value={mes}
-            >
-                <option value="" disabled>
-                    Mes atual
-                </option>
+            <div className="menu-content">
 
-                {meses.map((mes) => (
-                    <option key={mes} value={mes}>
-                        {mes}
-                    </option>
-                ))}
-            </select>
+                <div className="menu-title">
+                    <h2>Gestão de Usuários</h2>
+                </div>
 
-            {mes && (
-                <p>
-                    Mês selecionado: {mes}
-                </p>
-            )}
-        </div>
+                <div className="menu-options">
+
+                    <button
+                        onClick={() => navigate("/learn")}
+                    >
+                        Como usar?
+                    </button>
+
+                    <select
+                        onFocus={abrirOpcoes}
+                        onChange={selecionarMes}
+                        value={mes}
+                    >
+                        <option value="" disabled>
+                            Mês atual
+                        </option>
+
+                        {meses.map((mes) => (
+                            <option key={mes} value={mes}>
+                                {mes}
+                            </option>
+                        ))}
+                    </select>
+
+                    {mes && (
+                        <span className="month">
+                            {mes}
+                        </span>
+                    )}
+
+                </div>
+
+            </div>
+
+        </header>
     );
 }
+
